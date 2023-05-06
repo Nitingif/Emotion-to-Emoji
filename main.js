@@ -2,15 +2,10 @@ Webcam.set({
     width:300,
 height:300,
 image_format:'png',
-png_quality:120,
+png_quality:120
 });
 camera= document.getElementById("camera");
 Webcam.attach('#camera');
-function captureimage(){
-    Webcam.snap(function(data_uri){
-        document.getElementById("result").innerHTML='<img id="captured_image" src="'+data_uri+'"/>'
-    })  
-}
 function speak(){
     var synth=window.speechSynthesis;
     speak_data_1="The first predicton is"+prediction_1;
